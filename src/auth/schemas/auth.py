@@ -12,6 +12,7 @@ class TokenPayload(BaseModel):
 
 
 
+
 class UserCreate(BaseModel):
     username: str
     password: str
@@ -28,4 +29,23 @@ class UserCreate(BaseModel):
         value = value.strip()
         return hash_password(password=value)
     
+
+
+class UserRequest(BaseModel):
+    username: str
+    password: str
+
+    @field_validator("username", "password", mode="after")
+    @classmethod
+    def normalize_username(cls, value : str) -> str:
+        return normalize_string(text=value)
+
     
+    
+class RefreshRequest(BaseModel):
+    token : str
+
+    @field_validator("token", mode="before")
+    @classmethod
+    def normalize_token(cls, value: str) -> str:
+        return value.strip() 

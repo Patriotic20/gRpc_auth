@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nauth.proto\x12\x04\x61uth\"2\n\x0cLoginRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"9\n\nLoginReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\"5\n\x0fRegisterRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\" \n\rRegisterReply\x12\x0f\n\x07message\x18\x01 \x01(\t\"\'\n\x0eRefreshRequest\x12\x15\n\rrefresh_token\x18\x01 \x01(\t\"$\n\x0cRefreshReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t2\xa9\x01\n\x0b\x41uthService\x12-\n\x05Login\x12\x12.auth.LoginRequest\x1a\x10.auth.LoginReply\x12\x36\n\x08Register\x12\x15.auth.RegisterRequest\x1a\x13.auth.RegisterReply\x12\x33\n\x07Refresh\x12\x14.auth.RefreshRequest\x1a\x12.auth.RefreshReplyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nauth.proto\x12\x04\x61uth\"2\n\x0cLoginRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"H\n\nLoginReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\x12\r\n\x05\x65rror\x18\x03 \x01(\t\"5\n\x0fRegisterRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"1\n\rRegisterReply\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t\"\'\n\x0eRefreshRequest\x12\x15\n\rrefresh_token\x18\x01 \x01(\t\"$\n\x0cRefreshReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t2\xa9\x01\n\x0b\x41uthService\x12-\n\x05Login\x12\x12.auth.LoginRequest\x1a\x10.auth.LoginReply\x12\x36\n\x08Register\x12\x15.auth.RegisterRequest\x1a\x13.auth.RegisterReply\x12\x33\n\x07Refresh\x12\x14.auth.RefreshRequest\x1a\x12.auth.RefreshReplyb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -34,15 +34,15 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_LOGINREQUEST']._serialized_start=20
   _globals['_LOGINREQUEST']._serialized_end=70
   _globals['_LOGINREPLY']._serialized_start=72
-  _globals['_LOGINREPLY']._serialized_end=129
-  _globals['_REGISTERREQUEST']._serialized_start=131
-  _globals['_REGISTERREQUEST']._serialized_end=184
-  _globals['_REGISTERREPLY']._serialized_start=186
-  _globals['_REGISTERREPLY']._serialized_end=218
-  _globals['_REFRESHREQUEST']._serialized_start=220
-  _globals['_REFRESHREQUEST']._serialized_end=259
-  _globals['_REFRESHREPLY']._serialized_start=261
-  _globals['_REFRESHREPLY']._serialized_end=297
-  _globals['_AUTHSERVICE']._serialized_start=300
-  _globals['_AUTHSERVICE']._serialized_end=469
+  _globals['_LOGINREPLY']._serialized_end=144
+  _globals['_REGISTERREQUEST']._serialized_start=146
+  _globals['_REGISTERREQUEST']._serialized_end=199
+  _globals['_REGISTERREPLY']._serialized_start=201
+  _globals['_REGISTERREPLY']._serialized_end=250
+  _globals['_REFRESHREQUEST']._serialized_start=252
+  _globals['_REFRESHREQUEST']._serialized_end=291
+  _globals['_REFRESHREPLY']._serialized_start=293
+  _globals['_REFRESHREPLY']._serialized_end=329
+  _globals['_AUTHSERVICE']._serialized_start=332
+  _globals['_AUTHSERVICE']._serialized_end=501
 # @@protoc_insertion_point(module_scope)

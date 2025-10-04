@@ -26,14 +26,14 @@ def create_refresh_token(data: dict):
 
 
 async def validate_token(access_token: str):
+    pass
     
-    payload = jwt.decode(
-        access_token,
-        settings.jwt.access_secret_key,
-        algorithms=[settings.jwt.algorithm]
-    )
-    
-    sub = payload.get("sub")
-    
+    # payload = jwt.decode(
+    #     access_token,
+    #     settings.jwt.access_secret_key,
+    #     algorithms=[settings.jwt.algorithm]
+    # )
     
     
+    
+
