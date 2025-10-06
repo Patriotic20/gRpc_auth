@@ -10,7 +10,7 @@ services:
 
     environment:
       # ✅ This overrides or provides the DB URL for Alembic / SQLAlchemy
-      DATABASE_URL: postgresql+asyncpg://bekzod:123@postgres:5432/auth
+      APP_CONFIG__DB__URL: postgresql+asyncpg://bekzod:123@postgres:5432/auth
 
 
     depends_on:
