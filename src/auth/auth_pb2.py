@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nauth.proto\x12\x04\x61uth\"2\n\x0cLoginRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"H\n\nLoginReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\x12\r\n\x05\x65rror\x18\x03 \x01(\t\"5\n\x0fRegisterRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"1\n\rRegisterReply\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t\"\'\n\x0eRefreshRequest\x12\x15\n\rrefresh_token\x18\x01 \x01(\t\"$\n\x0cRefreshReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t2\xa9\x01\n\x0b\x41uthService\x12-\n\x05Login\x12\x12.auth.LoginRequest\x1a\x10.auth.LoginReply\x12\x36\n\x08Register\x12\x15.auth.RegisterRequest\x1a\x13.auth.RegisterReply\x12\x33\n\x07Refresh\x12\x14.auth.RefreshRequest\x1a\x12.auth.RefreshReplyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nauth.proto\x12\x04\x61uth\"2\n\x0cLoginRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"H\n\nLoginReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\x12\x15\n\rrefresh_token\x18\x02 \x01(\t\x12\r\n\x05\x65rror\x18\x03 \x01(\t\"5\n\x0fRegisterRequest\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"1\n\rRegisterReply\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t\"\'\n\x0eRefreshRequest\x12\x15\n\rrefresh_token\x18\x01 \x01(\t\"$\n\x0cRefreshReply\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x01 \x01(\t\"%\n\x14ValidateTokenRequest\x12\r\n\x05token\x18\x01 \x01(\t\"X\n\x12ValidateTokenReply\x12\r\n\x05valid\x18\x01 \x01(\x08\x12\x10\n\x08username\x18\x02 \x01(\t\x12\x0c\n\x04role\x18\x03 \x01(\t\x12\x13\n\x0bpermissions\x18\x04 \x03(\t2\xf0\x01\n\x0b\x41uthService\x12-\n\x05Login\x12\x12.auth.LoginRequest\x1a\x10.auth.LoginReply\x12\x36\n\x08Register\x12\x15.auth.RegisterRequest\x1a\x13.auth.RegisterReply\x12\x33\n\x07Refresh\x12\x14.auth.RefreshRequest\x1a\x12.auth.RefreshReply\x12\x45\n\rValidateToken\x12\x1a.auth.ValidateTokenRequest\x1a\x18.auth.ValidateTokenReplyb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -43,6 +43,10 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_REFRESHREQUEST']._serialized_end=291
   _globals['_REFRESHREPLY']._serialized_start=293
   _globals['_REFRESHREPLY']._serialized_end=329
-  _globals['_AUTHSERVICE']._serialized_start=332
-  _globals['_AUTHSERVICE']._serialized_end=501
+  _globals['_VALIDATETOKENREQUEST']._serialized_start=331
+  _globals['_VALIDATETOKENREQUEST']._serialized_end=368
+  _globals['_VALIDATETOKENREPLY']._serialized_start=370
+  _globals['_VALIDATETOKENREPLY']._serialized_end=458
+  _globals['_AUTHSERVICE']._serialized_start=461
+  _globals['_AUTHSERVICE']._serialized_end=701
 # @@protoc_insertion_point(module_scope)

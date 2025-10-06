@@ -6,6 +6,7 @@ service AuthService {
     rpc Login (LoginRequest) returns (LoginReply);
     rpc Register (RegisterRequest) returns (RegisterReply);
     rpc Refresh (RefreshRequest) returns (RefreshReply);
+    rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenReply);
 }
 
 message LoginRequest {
@@ -18,7 +19,6 @@ message LoginReply {
     string refresh_token = 2;
     string error = 3;
 }
-
 
 message RegisterRequest {
     string username = 1;
@@ -38,5 +38,13 @@ message RefreshReply {
     string access_token = 1;
 }
 
+message ValidateTokenRequest {
+    string token = 1;
+}
 
-
+message ValidateTokenReply {
+    bool valid = 1;
+    string username = 2;
+    string role = 3;
+    repeated string permissions = 4;
+}
