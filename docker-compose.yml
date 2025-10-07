@@ -1,21 +1,21 @@
 services:
-  app:
-    build: .
-    container_name: gRPC_auth
-    restart: unless-stopped
+  # app:
+  #   build: .
+  #   container_name: gRPC_auth
+  #   restart: unless-stopped
 
 
-    env_file:
-      - src/.env
+  #   env_file:
+  #     - src/.env
 
-    environment:
-      # ✅ This overrides or provides the DB URL for Alembic / SQLAlchemy
-      APP_CONFIG__DB__URL: postgresql+asyncpg://bekzod:123@postgres:5432/auth
+  #   environment:
+  #     # ✅ This overrides or provides the DB URL for Alembic / SQLAlchemy
+  #     APP_CONFIG__DB__URL: postgresql+asyncpg://bekzod:123@postgres:5432/auth
 
 
-    depends_on:
-      postgres:
-        condition: service_healthy
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
 
   postgres:
     image: postgres:15

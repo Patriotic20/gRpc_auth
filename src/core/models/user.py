@@ -1,20 +1,18 @@
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import relationship
-from typing import TYPE_CHECKING
-from core.models.mixin.timestamp_mixin import TimeMixIn
+from sqlalchemy.orm import Mapped , relationship
 
-
+from .mixin.timestamp_mixin import TimeMixIn
 from .base import Base
 
-if TYPE_CHECKING :
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
     from .role import Role
-    
+
 
 class User(Base , TimeMixIn):
     
-    username: Mapped[str] 
+    username: Mapped[str]
     password: Mapped[str]
-    
     
     
     roles: Mapped[list["Role"]] = relationship(
@@ -22,4 +20,3 @@ class User(Base , TimeMixIn):
         secondary="user_roles",
         back_populates="users"
     )
-    

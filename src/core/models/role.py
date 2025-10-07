@@ -1,18 +1,17 @@
-from sqlalchemy.orm import Mapped, mapped_column 
-from sqlalchemy.orm import relationship
-
-from typing import TYPE_CHECKING
-from core.models.mixin.timestamp_mixin import TimeMixIn
-
+from sqlalchemy.orm import Mapped , relationship , mapped_column
 
 from .base import Base
+from .mixin.timestamp_mixin import TimeMixIn
+
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from .user import User
     from .permission import Permission
 
 
-class Role(Base, TimeMixIn):
+
+class Role(Base , TimeMixIn):
     
     name: Mapped[str] = mapped_column(unique=True, nullable=False)
     
